@@ -1,0 +1,36 @@
+Features with corresponding actions
+
+PRIMARY
+List:
+- New item
+- Remove item
+- Toggle item
+- Submit Receipt
+- Publish list
+
+Lists:
+- Create List
+- Delete List
+- Find List
+- Sort Lists
+
+
+SECONDARY
+Login:
+- Submit form
+- (Remember me)
+
+Track Expenses:
+- Upload Receipt
+- Enter Total
+
+Analytics:
+- Average cost
+- Frequency of groceries
+- Spending graph
+
+
+EXTRA
+Autocomplete
+Image Recognition
+Product Classification
