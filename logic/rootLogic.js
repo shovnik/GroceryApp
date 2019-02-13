@@ -1,6 +1,10 @@
 import { createLogicMiddleware } from 'redux-logic';
-import sampleLogic from './sample';
+import register from './register';
+import login from './login';
+import save from './save';
 
 export default createLogicMiddleware([
-  sampleLogic
+  register,
+  login,
+  save
 ]);

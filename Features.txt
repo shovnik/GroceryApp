@@ -10,6 +10,7 @@ List:
 
 Lists:
 - Create List
+- Edit List
 - Delete List
 - Find List
 - Sort Lists
@@ -31,6 +32,10 @@ Analytics:
 
 
 EXTRA
+Search
 Autocomplete
-Image Recognition
-Product Classification
+
+Improvements:
+- router
+- style hierarchy
+- reduce queries

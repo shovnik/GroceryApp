@@ -1,7 +1,5 @@
-export const DELETE_LIST = 'lists:deleteList';
 export const FETCH_LISTS = 'lists:fetchLists';
-export const FETCH_LISTS_SUCCESS = 'lists:fetchListsSuccess';
-export const SET_SORT = 'lists:setSort';
+export const DELETE_LIST = 'lists:deleteList';
 
 export const deleteList = id => ({
   type: DELETE_LIST,
@@ -9,15 +7,6 @@ export const deleteList = id => ({
 });
 
 export const fetchLists = () => ({
-  type: FETCH_LISTS
-});
-
-export const fetchListsSuccess = lists => ({
-  type: FETCH_LISTS_SUCCESS,
+  type: FETCH_LISTS,
   payload: lists
-});
-
-export const setSort = sortCriteria => ({
-  type: SET_SORT,
-  payload: sortCriteria
 });

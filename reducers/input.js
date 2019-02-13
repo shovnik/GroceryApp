@@ -1,25 +1,25 @@
 import {
-  CLEAR_INPUT,
-  UPDATE_USERNAME,
-  UPDATE_PASSWORD
+  UPDATE_EMAIL,
+  UPDATE_PASSWORD,
+  CLEAR_INPUT
 } from '../actions/input'
 
-export default function inputReducer(state = { username: '', password: ''}, { type, payload }) {
+export default function inputReducer(state = { email: '', password: ''}, { type, payload }) {
   switch (type) {
-    case CLEAR_INPUT:
-      return {
-        username: '',
-        password: ''
-      };
-    case UPDATE_USERNAME:
+    case UPDATE_EMAIL:
       return {
         ...state,
-        username: payload
+        email: payload
       };
     case UPDATE_PASSWORD:
       return {
         ...state,
         password: payload
+      };
+    case CLEAR_INPUT:
+      return {
+        email: '',
+        password: ''
       };
     default:
       return state;

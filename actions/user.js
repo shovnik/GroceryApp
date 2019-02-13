@@ -1,12 +1,21 @@
-export const CREATE_USER = 'user:createUser';
-export const VERIFY_USER = 'user:verifyUser';
+export const REGISTER = 'user:register';
+export const LOGIN = 'user:login';
+export const LOGGED_IN = 'user:loggedIn';
+export const LOGGED_OUT = 'input:loggedOut';
 
-export const createUser = credentials => ({
-  type: CREATE_USER,
-  payload: credentials
+export const login = (email, password) => ({
+  type: LOGIN
 });
 
-export const verifyUser = credentials => ({
-  type: VERIFY_USER,
-  payload: credentials
+export const register = (email, password) => ({
+  type: REGISTER
+});
+
+export const loggedIn = user => ({
+  type: LOGGED_IN,
+  payload: user
+});
+
+export const updateUsername = () => ({
+  type: LOGGED_OUT
 });

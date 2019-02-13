@@ -1,20 +1,14 @@
 import {
-  FETCH_LISTS_SUCCESS,
-  SET_SORT
-};
+  FETCH_LISTS
+} from '../actions/lists';
 
-export default function listsReducer(state = { sortCriteria:'date', data: [] }, { type, payload }) {
+export default function listsReducer(state = { data: [] }, { type, payload }) {
   switch (type) {
-    case FETCH_LISTS_SUCCESS:
+    case FETCH_LISTS:
       return {
         ...state,
         data: payload
       };
-    case SET_SORT:
-      return {
-        ..state,
-        sortCriteria: payload
-      }
     default:
       return state;
   }
