@@ -30,10 +30,11 @@ export const Input = styled.TextInput`
 `;
 
 export const NumericInput = styled.TextInput`
+  text-align: center;
   background-color: #fff;
   font-size: 18px;
   padding: 3px 0;
-  width: 20%;
+  width: 15%;
 `;
 
 export const LoginButton = styled.TouchableHighlight`
@@ -42,6 +43,16 @@ export const LoginButton = styled.TouchableHighlight`
   justify-content: center;
   margin-top: 36px;
   padding: 18px;
+`;
+
+export const FlexText = styled.Text`
+  align-items: center;
+  background-color: #fff;
+  ${({flex}) => flex && `flex: ${flex}`}
+  font-size: 18px;
+  font-family: Roboto;
+  padding: 9px;
+  ${({align}) => align && `text-align: ${align}`}
 `;
 
 export const PlainText = styled.Text`
@@ -58,7 +69,6 @@ export const ButtonText = styled.Text`
 export const ItemText = styled.Text`
   font-size: 18px;
   justify-content: center;
-  margin: 18px 0;
   ${({ completed }) => {
     return completed && 'textDecorationLine: line-through;'
   }}
@@ -81,7 +91,7 @@ export const CustomButton = styled.TouchableHighlight`
   background-color: ${({color}) => color};
   ${({flex}) => flex && `flex: ${flex}`}
   justify-content: center;
-  padding: 0 9px;
+  padding: 9px;
 `;
 
 export const Container = styled.View`

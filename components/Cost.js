@@ -17,12 +17,14 @@ export default class Cost extends React.Component {
     for(let i = 0; i < text.length; i++) {
       if(digits.indexOf(text[i]) > -1)
         newInput += text[i];
-      else if(text[i] == '.' && !periodCount)
+      else if(text[i] == '.' && !periodCount) {
+        newInput += text[i];
         periodCount++;
+      }
       else
         alert("Enter numbers and one '.' only.");
     }
-    this.props.updateCost(newInput);
+    this.props.updateCost(parseFloat(newInput));
   }
   render() {
     return (

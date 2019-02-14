@@ -10,9 +10,10 @@ export default createLogic({
       const { email, password } = getState().input;
       const username = email.split('@')[0];
       const resp = await auth.createUserWithEmailAndPassword(email, password);
-      const user = { uid: resp.user.uid, username, email };
-      await database.ref(`Users/${user.uid}`).set({...user});
-      dispatch(loggedIn(user));
+      const uid = resp.user.uid;
+      const user = { username, email };
+      await database.ref(`Users/${uid}`).set(user);
+      dispatch(loggedIn({ ...user, uid }));
     } catch (e) {
       alert(e);
     } finally {

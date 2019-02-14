@@ -1,7 +1,7 @@
 import { createLogic } from 'redux-logic';
 import { auth, database } from "../firebase";
-import { LOGIN } from '../actions/user';
-import { loggedIn } from '../actions/user';
+import { LOGIN, loggedIn } from '../actions/user';
+import { fetchLists } from '../actions/lists';
 
 export default createLogic({
   type: LOGIN,
@@ -9,9 +9,10 @@ export default createLogic({
     try {
       const { email, password } = getState().input;
       const resp = await auth.signInWithEmailAndPassword(email, password);
-      const snapshot = await database.ref(`Users/${resp.user.uid}`).once('value');
-      const user = snapshot.val();
-      dispatch(loggedIn({ uid:user.uid, username:user.username, email:user.email }));
+      const uid = resp.user.uid;
+      const snapshot = await database.ref(`Users/${uid}`).once('value');
+      dispatch(loggedIn({ ...snapshot.val(), uid }));
+      dispatch(fetchLists());
     } catch (e) {
       alert(e);
     } finally {

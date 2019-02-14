@@ -12,7 +12,7 @@ import {
 const initialState = {
   active: false,
   filter: 'ALL',
-  uid: null,
+  pushKey: null,
   date: null,
   items: [],
   cost: 0
