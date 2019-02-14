@@ -1,6 +1,7 @@
 import {
   FETCH_LISTS_SUCCESS,
   UPDATE_DELETE_KEY,
+  CLEAR_LIST
 } from '../actions/lists';
 
 export default function listsReducer(state = { data: {}, deleteKey: '' }, { type, payload }) {
@@ -14,7 +15,12 @@ export default function listsReducer(state = { data: {}, deleteKey: '' }, { type
       return {
         ...state,
         deleteKey: payload
-      }
+      };
+    case CLEAR_LIST:
+      return {
+        data: {},
+        deleteKey: ''
+      };
     default:
       return state;
   }

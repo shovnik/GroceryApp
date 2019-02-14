@@ -39,10 +39,20 @@ export const NumericInput = styled.TextInput`
 
 export const LoginButton = styled.TouchableHighlight`
   align-items: center;
-  background-color: #0099cc;
+  background-color: #09c;
   justify-content: center;
   margin-top: 36px;
   padding: 18px;
+`;
+
+export const LogoutButton = styled.TouchableHighlight`
+  align-items: center;
+  background-color: #09c;
+  border-radius: 5px;
+  justify-content: center;
+  margin: 18px 18px 18px auto;
+  padding: 9px;
+  width: 25%;
 `;
 
 export const FlexText = styled.Text`
@@ -114,4 +124,8 @@ export const FilterBox = styled.TouchableHighlight`
   flex: 1;
   justify-content: center;
   padding: 15px 20px;
+`;
+
+export const Space = styled.View`
+  margin: 9px;
 `;

@@ -1,10 +1,15 @@
 export const REGISTER = 'user:register';
 export const LOGIN = 'user:login';
 export const LOGGED_IN = 'user:loggedIn';
-export const LOGGED_OUT = 'input:loggedOut';
+export const LOGOUT = 'user:logout';
+export const LOGGED_OUT = 'user:loggedOut';
 
-export const login = (email, password) => ({
+export const login = () => ({
   type: LOGIN
+});
+
+export const logout = () => ({
+  type: LOGOUT
 });
 
 export const register = (email, password) => ({
@@ -16,6 +21,6 @@ export const loggedIn = user => ({
   payload: user
 });
 
-export const updateUsername = () => ({
+export const loggedOut = () => ({
   type: LOGGED_OUT
 });

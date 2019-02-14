@@ -2,6 +2,7 @@ export const FETCH_LISTS = 'lists:fetchLists';
 export const FETCH_LISTS_SUCCESS = 'lists:fetchListsSuccess';
 export const DELETE_LIST = 'lists:deleteList';
 export const UPDATE_DELETE_KEY = 'lists:updateDeleteKey';
+export const CLEAR_LISTS = 'lists:clearLists';
 
 export const fetchLists = () => ({
   type: FETCH_LISTS
@@ -19,4 +20,8 @@ export const deleteList = () => ({
 export const updateDeleteKey = deleteKey => ({
   type: UPDATE_DELETE_KEY,
   payload: deleteKey
+});
+
+export const clearLists = () => ({
+  type: CLEAR_LISTS
 });

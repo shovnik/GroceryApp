@@ -1,41 +1,15 @@
-Features with corresponding actions
-
-PRIMARY
-List:
-- New item
-- Remove item
-- Toggle item
-- Submit Receipt
-- Publish list
-
-Lists:
-- Create List
-- Edit List
-- Delete List
-- Find List
-- Sort Lists
-
-
-SECONDARY
-Login:
-- Submit form
-- (Remember me)
-
-Track Expenses:
-- Upload Receipt
-- Enter Total
-
-Analytics:
-- Average cost
-- Frequency of groceries
-- Spending graph
-
-
-EXTRA
-Search
-Autocomplete
-
 Improvements:
 - router
 - style hierarchy
-- reduce queries
+- event listeners
+- alternate data structures (ex: for autocomplete)
+- consistent UI
+
+Extra Features:
+- autocomplete for items
+- list templates
+- search lists by items
+- spending graph
+- average grocery cost
+- alternate sorting
+- receipt upload
