@@ -1,6 +1,8 @@
 Improvements:
 - router
 - style hierarchy
+- component groups
+- generic vs specific components (streamlining)
 - event listeners
 - alternate data structures (ex: for autocomplete)
 - mobile adapted UI
