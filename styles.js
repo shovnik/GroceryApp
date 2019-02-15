@@ -1,25 +1,36 @@
 import styled from 'styled-components';
 
-export const Label = styled.Text`
-  color: #595856;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Roboto';
-  margin: 18px 0 9px 0;
-`;
 
 export const LoginWrapper = styled.ScrollView`
-  background-color: #b3ffcc;
+  background-color: #caf;
   display: flex;
   flex-direction: column;
-  padding: 18px;
+  height: 100%;
+  padding: 36px 24px;
 `;
 
-export const Wrapper = styled.ScrollView`
-  background-color: #b3ffcc;
+export const ScrollWrapper = styled.ScrollView`
+  background-color: #caf;
   display: flex;
   flex-direction: column;
-  padding: 9px 0;
+`;
+
+export const StaticWrapper = styled.View`
+  background-color: #caf;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
+
+export const BandContainer = styled.View`
+  background-color: #09c;
+  padding: 21px 6px 6px 6px;
+`;
+
+export const BandText = styled.Text`
+  color: #fff;
+  font-size: 18px;
+  font-style: italic;
 `;
 
 export const Input = styled.TextInput`
@@ -27,6 +38,18 @@ export const Input = styled.TextInput`
   font-size: 24px;
   padding: 9px 18px;
   min-width: 75%;
+`;
+
+export const Label = styled.Text`
+  color: #595856;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-bottom: 9px;
+`;
+
+export const Gap = styled.View`
+  margin-bottom: 18px;
 `;
 
 export const NumericInput = styled.TextInput`
@@ -37,11 +60,11 @@ export const NumericInput = styled.TextInput`
   width: 15%;
 `;
 
-export const LoginButton = styled.TouchableHighlight`
+export const SubmitButton = styled.TouchableHighlight`
   align-items: center;
   background-color: #09c;
   justify-content: center;
-  margin-top: 36px;
+  margin-top: 30px;
   padding: 18px;
 `;
 
@@ -50,7 +73,7 @@ export const LogoutButton = styled.TouchableHighlight`
   background-color: #09c;
   border-radius: 5px;
   justify-content: center;
-  margin: 18px 18px 18px auto;
+  margin: 6px 6px 6px auto;
   padding: 9px;
   width: 25%;
 `;
@@ -77,7 +100,7 @@ export const ButtonText = styled.Text`
 `;
 
 export const ItemText = styled.Text`
-  font-size: 18px;
+  font-size: 24px;
   justify-content: center;
   ${({ completed }) => {
     return completed && 'textDecorationLine: line-through;'
@@ -85,8 +108,18 @@ export const ItemText = styled.Text`
 `;
 
 export const Title = styled.Text`
-  color: #595856;
+  color: #fff;
   text-align: center;
+  font-family: sans-serif;
+  font-size: 42px;
+  font-style: italic;
+  margin: 18px 0;
+`;
+
+export const SubTitle = styled.Text`
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
   font-size: 36px;
   margin: 18px 0;
 `;
@@ -124,8 +157,4 @@ export const FilterBox = styled.TouchableHighlight`
   flex: 1;
   justify-content: center;
   padding: 15px 20px;
-`;
-
-export const Space = styled.View`
-  margin: 9px;
 `;

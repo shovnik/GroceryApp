@@ -1,9 +1,9 @@
 import React from 'react';
+import { Icon } from 'react-native-elements';
 import {
   Form,
   Input,
-  CustomButton,
-  ButtonText
+  CustomButton
 } from '../styles';
 
 export default class NewItem extends React.Component {
@@ -12,7 +12,7 @@ export default class NewItem extends React.Component {
       <Form>
         <Input placeholder="New Item" ref={ref => {this.inputRef = ref}} onChangeText={text => {this.input = text}}></Input>
         <CustomButton color="#0099cc" flex={1} onPress={() => { if(this.input!=='')this.props.addItem(this.input); this.inputRef.clear(); this.input = ''}}>
-          <ButtonText>Add</ButtonText>
+          <Icon name='add' type='material' color='#fff'/>
         </CustomButton>
       </Form>
     )

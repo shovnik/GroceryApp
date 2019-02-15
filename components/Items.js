@@ -1,6 +1,6 @@
 import React from 'react';
 import Item from '../containers/Item';
-import { View } from 'react-native';
+import { ScrollWrapper } from '../styles';
 
 export default class Items extends React.Component {
   constructor(props) {
@@ -19,9 +19,9 @@ export default class Items extends React.Component {
   }
   render() {
     return (
-      <View>
-        {this.filterList().map((item, index) => <Item key={item.id} index={index} {...item} />)}
-      </View>
+      <ScrollWrapper>
+        {this.filterList().map((item, index) => <Item key={item.id} index={this.filterList().length - index - 1} {...item} />).reverse()}
+      </ScrollWrapper>
     )
   }
 };

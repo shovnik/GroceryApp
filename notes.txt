@@ -3,7 +3,9 @@ Improvements:
 - style hierarchy
 - event listeners
 - alternate data structures (ex: for autocomplete)
-- consistent UI
+- mobile adapted UI
+- pre-fetching data
+- keyboard avoiding inputs
 
 Extra Features:
 - autocomplete for items
@@ -13,3 +15,4 @@ Extra Features:
 - average grocery cost
 - alternate sorting
 - receipt upload
+- list preview

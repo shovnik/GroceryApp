@@ -10,10 +10,10 @@ export default class Filter extends React.Component {
           <Text>All</Text>
         </FilterBox>
         <FilterBox isActive={this.props.filter === 'INCOMPLETE'} onPress={() => this.props.setFilter('INCOMPLETE')}>
-          <Text>Incomplete</Text>
+          <Text>Purchased</Text>
         </FilterBox>
         <FilterBox isActive={this.props.filter === 'COMPLETE'}  onPress={() => this.props.setFilter('COMPLETE')}>
-          <Text>Complete</Text>
+          <Text>Remaining</Text>
         </FilterBox>
       </Container>
     )

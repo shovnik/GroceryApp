@@ -10,7 +10,7 @@ export default createLogic({
       const { pushKey, date, items, cost } = getState().editor;
       if(!items || !items.length) {
         alert('List must contain at least 1 item.');
-        done();
+        return done();
       }
       const uid = getState().user.uid;
       if(pushKey !== null)
